@@ -46,7 +46,7 @@ h1,h2,h3{
     color: white;
 }
 /* mailSection & gameSection */
-.mailSection, .gameSection{
+.no-opacity{
     opacity: 0;
     transition: all 1s;
 }
