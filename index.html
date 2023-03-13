@@ -38,7 +38,18 @@
                 </div>
         </div>
         <div id="diceGame" class="d-none no-opacity">
-
+            <div class="diceGame-wrap d-flex flex-column justify-content-center align-items-center">
+                <h2 class="mb-5 fw-bold">Whoever gets the biggest number wins</h2>
+                <div class="user-wins">
+                </div>
+                <div class="dice-details w-50">
+                    <h4 class="my-3"><strong>Your</strong> number is:<span id="userNumber"></span></h4>
+                    <h4 class="my-3"><strong>My</strong> number is:<span id="pcNumber"></span></h4>
+                    <h4 class="my-3"><strong>The winner</strong> is:<span id="pcNumber"></span></h4>
+                    
+                </div>
+                <button class="btn mt-5">Roll the dice</button>
+            </div>
         </div>
     </div>
     <script src="./js/utilities.js"></script>

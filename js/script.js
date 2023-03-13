@@ -9,7 +9,7 @@ initialBtns[0].addEventListener('click',() => {
     switchVisibility('initial','mailCheker')
 })
 initialBtns[1].addEventListener('click',() => {
-    switchVisibility('initial','btnDice')
+    switchVisibility('initial','diceGame')
 })
 /* Remove the refresh on input type submit */
 preventSubmitRefresh(mailform)
