@@ -42,13 +42,17 @@
                 <h2 class="mb-5 fw-bold">Whoever gets the biggest number wins</h2>
                 <div class="user-wins">
                 </div>
-                <div class="dice-details w-50">
-                    <h4 class="my-3"><strong>Your</strong> number is:<span class="ms-3 h3" id="userNumber"></span></h4>
-                    <h4 class="my-3"><strong>My</strong> number is:<span class="ms-3 h3" id="pcNumber"></span></h4>
-                    <h4 class="my-3"><strong>The winner</strong> is:<span class="ms-3 h3" id="winnerNumber"></span></h4>
-                    
+                <div id="dice-details" class="w-50 no-opacity d-flex justify-content-center flex-column align-items-center">
+                    <div>
+                        <h4 class="my-3 me-4 d-inline-block"><strong>Your</strong> number is:<span class="ms-3 h3" id="userNumber"></span></h4>
+                        <h4 class="my-3 d-inline-block"><strong>My</strong> number is:<span class="ms-3 h3" id="pcNumber"></span></h4>
+                    </div>
+                    <h4 class="my-3"><strong>The winner</strong> is:<span class="ms-3 h3 fw-bold" id="winnerNumber"></span></h4>
                 </div>
-                <button id="btnRoll" class="btn mt-5">Roll the dice</button>
+                <div id="diceBtns" class="d-flex mt-5 gap-3">
+                    <button id="btnRoll" class="btn">Roll the dice</button>
+                    <button class="btn"><a href="./index.html">Return to the start</a></button>
+                </div>
             </div>
         </div>
     </div>

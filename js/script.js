@@ -17,6 +17,7 @@ preventSubmitRefresh(mailform);
 document.getElementById('btnSubmitMail').addEventListener('click', () => {mailCheck(mailsList)});
 /* Roll the dice */
 document.getElementById('btnRoll').addEventListener('click', () => {
+    giveVisibility('dice-details')
     document.getElementById('userNumber').innerHTML = '';
     document.getElementById('pcNumber').innerHTML = '';
     document.getElementById('winnerNumber').innerHTML = '';
@@ -48,14 +49,7 @@ document.getElementById('btnRoll').addEventListener('click', () => {
         }else if (userNumber == pcNumber){
             draw = true
         }
-        /* let result = draw ? "It's a DRAW!!" : pcwinner ? "I Won!! Mhuahua" : "You won :(" */
-        if (draw){
-            result = "It's a DRAW!!";
-        }else if (pcwinner){
-            result = "I Won!! Mhuahua";
-        }else{
-            result = "You won :(";
-        }
+        let result = draw ? "It's a DRAW!!" : pcwinner ? "I Won!! Mhuahua" : "You won :("
         console.log(result)
         console.log(draw)
         document.getElementById('winnerNumber').innerHTML = result
