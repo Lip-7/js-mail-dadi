@@ -25,7 +25,7 @@
         </div>
         <div id="mailCheker" class="d-none no-opacity">
                 <form id="mailForm" class="mailCheker-wrapper d-flex flex-column gap-2 align-items-center">
-                    <label for="emailInput"><h2 class="fw-bold">Please insert your e-mail</h2></label>
+                    <label for="emailInput"><h2 class="fw-bold text-center">Please insert your e-mail</h2></label>
                     <input type="email" id="emailInput" placeholder="JonSnow@winterfell.com" class="rounded-3 border-0 text-center px-5 mb-2">
                     <div id="mailFormBtns">
                         <input id="btnSubmitMail" type="submit" value="Check" class="btn me-3">
@@ -39,17 +39,17 @@
         </div>
         <div id="diceGame" class="d-none no-opacity">
             <div class="diceGame-wrap d-flex flex-column justify-content-center align-items-center">
-                <h2 class="mb-5 fw-bold">Whoever gets the biggest number wins</h2>
+                <h2 class="mb-5 fw-bold text-center">Whoever gets the biggest number wins</h2>
                 <div class="user-wins">
                 </div>
                 <div id="dice-details" class="w-50 no-opacity d-flex justify-content-center flex-column align-items-center">
-                    <div>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <h4 class="my-3 me-4 d-inline-block"><strong>Your</strong> number is:<span class="ms-3 h3" id="userNumber"></span></h4>
                         <h4 class="my-3 d-inline-block"><strong>My</strong> number is:<span class="ms-3 h3" id="pcNumber"></span></h4>
                     </div>
-                    <h4 class="my-3"><strong>The winner</strong> is:<span class="ms-3 h3 fw-bold" id="winnerNumber"></span></h4>
+                    <h4 class="my-5"><span class="ms-3 h3 fw-bold" id="winnerNumber"></span></h4>
                 </div>
-                <div id="diceBtns" class="d-flex mt-5 gap-3">
+                <div id="diceBtns" class="d-flex mt-4 gap-3">
                     <button id="btnRoll" class="btn">Roll the dice</button>
                     <button class="btn"><a href="./index.html">Return to the start</a></button>
                 </div>

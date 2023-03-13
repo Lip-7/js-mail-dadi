@@ -51,3 +51,9 @@ h1,h2,h3{
     transition: all 1s;
 }
 /* mailSection */
+#diceGame h4{
+    color: var(--primary-color);
+}
+#dice-details>h4{
+    scale: 1.5;
+}
