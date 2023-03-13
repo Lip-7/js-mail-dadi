@@ -26,7 +26,7 @@
         <div id="mailCheker" class="d-none no-opacity">
                 <form id="mailForm" class="mailCheker-wrapper d-flex flex-column gap-2 align-items-center">
                     <label for="emailInput"><h2 class="fw-bold">Please insert your e-mail</h2></label>
-                    <input type="email" id="emailInput" placeholder="JonSnow@winterfell.com" class="rounded-3 border-0 text-center px-3 mb-2">
+                    <input type="email" id="emailInput" placeholder="JonSnow@winterfell.com" class="rounded-3 border-0 text-center px-5 mb-2">
                     <div id="mailFormBtns">
                         <input id="btnSubmitMail" type="submit" value="Check" class="btn me-3">
                         <button class="btn"><a href="./index.html">Return to the start</a></button>
@@ -43,12 +43,12 @@
                 <div class="user-wins">
                 </div>
                 <div class="dice-details w-50">
-                    <h4 class="my-3"><strong>Your</strong> number is:<span id="userNumber"></span></h4>
-                    <h4 class="my-3"><strong>My</strong> number is:<span id="pcNumber"></span></h4>
-                    <h4 class="my-3"><strong>The winner</strong> is:<span id="pcNumber"></span></h4>
+                    <h4 class="my-3"><strong>Your</strong> number is:<span class="ms-3 h3" id="userNumber"></span></h4>
+                    <h4 class="my-3"><strong>My</strong> number is:<span class="ms-3 h3" id="pcNumber"></span></h4>
+                    <h4 class="my-3"><strong>The winner</strong> is:<span class="ms-3 h3" id="winnerNumber"></span></h4>
                     
                 </div>
-                <button class="btn mt-5">Roll the dice</button>
+                <button id="btnRoll" class="btn mt-5">Roll the dice</button>
             </div>
         </div>
     </div>

@@ -13,19 +13,43 @@ initialBtns[1].addEventListener('click',() => {
 })
 /* Remove the refresh on input type submit */
 preventSubmitRefresh(mailform);
-
-
-document.getElementById('btnSubmitMail').addEventListener('click', () => {
-    const userMail = document.getElementById('emailInput').value;
-    let result = false
-    for (let i = 0; i < mailsList.length; i++){
-        if (mailsList[i] == userMail){
-            result = true;
+/* verify the mail */
+document.getElementById('btnSubmitMail').addEventListener('click', () => {mailCheck(mailsList)});
+/* Roll the dice */
+document.getElementById('btnRoll').addEventListener('click', () => {
+    document.getElementById('userNumber').innerHTML = '';
+    document.getElementById('pcNumber').innerHTML = '';
+    document.getElementById('winnerNumber').innerHTML = '';
+    for (let i = 0; i < 2; i++) {
+        let pcwinner = true
+        let draw = false
+        let userNumber = 0
+        let pcNumber = 0
+        for (let j = 0; j < 10; j++) {
+            if (i == 0) {
+                setTimeout(() => {
+                    userNumber = randomNumber(6);
+                    document.getElementById('userNumber').innerHTML = userNumber;
+                }, j * 100);
+            } else {
+                setTimeout(() => {
+                    setTimeout(() => {
+                        pcNumber = randomNumber(6);
+                        document.getElementById('pcNumber').innerHTML = pcNumber;
+                    }, 1200);
+                }, j * 100);
+            }
         }
-    }
-    if (result) {
-        switchVisibility('mailForm', 'mailResult');
-    }else{
-        alert('Sorry but your mail is not in our database');
+        if (userNumber > pcNumber) {
+            pcwinner = false
+        }else if (userNumber == pcNumber){
+            draw = true
+        }
+        setTimeout(() => {
+                let result = draw ? "It's a DRAW!!" : pcwinner ? "I Won!! Mhuahua" : "You won :("
+                    console.log(result)
+                    console.log(draw)
+                document.getElementById('winnerNumber').innerHTML = result
+            }, 2500)
     }
 });

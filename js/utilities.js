@@ -17,3 +17,20 @@ function preventSubmitRefresh(form){
       e.preventDefault();
 } )
 };
+function mailCheck (mailsList){
+  const userMail = document.getElementById('emailInput').value;
+  let result = false
+  for (let i = 0; i < mailsList.length; i++){
+      if (mailsList[i] == userMail){
+          result = true;
+      }
+  }
+  if (result) {
+      switchVisibility('mailForm', 'mailResult');
+  }else{
+      alert('Sorry but your mail is not in our database');
+  }
+};
+function randomNumber(max) {
+  return Math.round(Math.random() * (max - 1)) + 1;
+};
