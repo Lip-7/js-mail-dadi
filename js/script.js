@@ -25,6 +25,7 @@ document.getElementById('btnRoll').addEventListener('click', () => {
         let draw = false
         let userNumber = 0
         let pcNumber = 0
+        let result = ''
         for (let j = 0; j < 10; j++) {
             if (i == 0) {
                 setTimeout(() => {
@@ -40,16 +41,23 @@ document.getElementById('btnRoll').addEventListener('click', () => {
                 }, j * 100);
             }
         }
-        if (userNumber > pcNumber) {
-            pcwinner = false
-        }else if (userNumber == pcNumber){
-            draw = true
-        }
         setTimeout(() => {
-                let result = draw ? "It's a DRAW!!" : pcwinner ? "I Won!! Mhuahua" : "You won :("
-                    console.log(result)
-                    console.log(draw)
-                document.getElementById('winnerNumber').innerHTML = result
-            }, 2500)
+            if (userNumber > pcNumber) {
+                pcwinner = false
+            }else if (userNumber == pcNumber){
+                draw = true
+            }
+            /* let result = draw ? "It's a DRAW!!" : pcwinner ? "I Won!! Mhuahua" : "You won :(" */
+            if (draw){
+                result = "It's a DRAW!!";
+            }else if (pcwinner){
+                result = "I Won!! Mhuahua";
+            }else{
+                result = "You won :(";
+            }
+            console.log(result)
+            console.log(draw)
+            document.getElementById('winnerNumber').innerHTML = result
+        }, 2500)
     }
 });
