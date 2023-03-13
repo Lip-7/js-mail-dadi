@@ -42,3 +42,42 @@ function mailCheck (mailsList){
 function randomNumber(max) {
   return Math.round(Math.random() * (max - 1)) + 1;
 };
+function diceGame (){
+  giveVisibility('dice-details')
+  document.getElementById('userNumber').innerHTML = '';
+  document.getElementById('pcNumber').innerHTML = '';
+  document.getElementById('winnerNumber').innerHTML = '';
+  let pcwinner = true
+      let draw = false
+      let userNumber = 0
+      let pcNumber = 0
+      let result = ''
+  for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 10; j++) {
+          if (i == 0) {
+              setTimeout(() => {
+                  userNumber = randomNumber(6);
+                  document.getElementById('userNumber').innerHTML = userNumber;
+              }, j * 100);
+          } else {
+              setTimeout(() => {
+                  setTimeout(() => {
+                      pcNumber = randomNumber(6);
+                      document.getElementById('pcNumber').innerHTML = pcNumber;
+                  }, 1200);
+              }, j * 100);
+          }
+      }
+  }
+  setTimeout(() => {
+      if (userNumber > pcNumber) {
+          pcwinner = false
+      }else if (userNumber == pcNumber){
+          draw = true
+      }
+      let result = draw ? "It's a DRAW!!" : pcwinner ? "I Won!! Mhuahua" : "You won :("
+      console.log(result)
+      console.log(draw)
+      document.getElementById('winnerNumber').innerHTML = result
+  }, 2500)
+};
