@@ -24,10 +24,18 @@
 
         </div>
         <div id="mailCheker" class="d-none mailSection">
-            <div class="mailCheker-wrapper d-flex flex-column gap-2">
-                <label for="emailInput"><h2 class="fw-bold">Please insert your e-mail</h2></label>
-                <input type="email" id="emailInput" placeholder="JonSnow@winterfell.com" class="rounded-3 border-0 text-center">
-            </div>
+                <form id="mailForm" class="mailCheker-wrapper d-flex flex-column gap-2 align-items-center">
+                    <label for="emailInput"><h2 class="fw-bold">Please insert your e-mail</h2></label>
+                    <input type="email" id="emailInput" placeholder="JonSnow@winterfell.com" class="rounded-3 border-0 text-center px-3 mb-2">
+                    <div id="mailFormBtns">
+                        <input id="btnSubmitMail" type="submit" value="Check" class="btn me-3">
+                        <button class="btn"><a href="./index.html">Return to the start</a></button>
+                    </div>
+                </form>
+                <div id="mailResult" class="d-flex justify-content-center align-items-center d-none flex-column">
+                    <h2 class="fw-bolder mb-4">Wellcome bro</h2>
+                    <button class="btn"><a href="./index.html">Return to the start</a></button>
+                </div>
         </div>
         <div id="diceGame" class="d-none gameSection">
 

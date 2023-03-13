@@ -12,3 +12,8 @@ function separe(buttons){
       buttons[i].style.translate = 0;
     }
 };
+function preventSubmitRefresh(form){
+  form.addEventListener('submit', (e) => {
+      e.preventDefault();
+} )
+};
