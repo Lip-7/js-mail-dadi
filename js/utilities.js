@@ -43,15 +43,15 @@ function randomNumber(max) {
   return Math.round(Math.random() * (max - 1)) + 1;
 };
 function diceGame (){
-  giveVisibility('dice-details')
-  document.getElementById('userNumber').innerHTML = '';
-  document.getElementById('pcNumber').innerHTML = '';
-  document.getElementById('winnerNumber').innerHTML = '';
-  let pcwinner = true
-      let draw = false
-      let userNumber = 0
-      let pcNumber = 0
-      let result = ''
+    giveVisibility('dice-details')
+    document.getElementById('userNumber').innerHTML = '';
+    document.getElementById('pcNumber').innerHTML = '';
+    document.getElementById('winnerNumber').innerHTML = '';
+    let pcwinner = true
+    let draw = false
+    let userNumber = 0
+    let pcNumber = 0
+    let result = ''
   for (let i = 0; i < 2; i++) {
       for (let j = 0; j < 10; j++) {
           if (i == 0) {
